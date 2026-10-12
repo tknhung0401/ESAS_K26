@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hướng dẫn sinh viên · Lộ trình NNTM&amp;BV K2026</title>
+<meta name="description" content="Hướng dẫn sinh viên Khóa 2026 đăng nhập và tự theo dõi lộ trình học tập ngành Nông nghiệp thông minh và bền vững.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:wght@600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --bg:#f2f5f0; --surface:#ffffff; --ink:#16231b; --muted:#5a6a60; --line:#d5ded3;
+  --accent:#2c7547; --accent-ink:#ffffff; --accent-soft:#e1efe5; --warn:#94540a; --warn-soft:#fbefd9; --l2:#acdccf;
+  --f-display:"Lora",Georgia,serif; --f-body:"Be Vietnam Pro",-apple-system,"Segoe UI",Roboto,Arial,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#101712; --surface:#18211b; --ink:#e2eae3; --muted:#93a398; --line:#2b372f;
+  --accent:#70cf92; --accent-ink:#0d1a12; --accent-soft:#1d3325; --warn:#f0bf62; --warn-soft:#352a14; --l2:#17423a; color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#101712; --surface:#18211b; --ink:#e2eae3; --muted:#93a398; --line:#2b372f;
+  --accent:#70cf92; --accent-ink:#0d1a12; --accent-soft:#1d3325; --warn:#f0bf62; --warn-soft:#352a14; --l2:#17423a; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 var(--f-body)}
+.wrap{max-width:760px;margin:0 auto;padding:20px 16px 80px}
+a{color:var(--accent)}
+.cohort{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:13px;padding:4px 12px;border-radius:999px}
+h1{font-family:var(--f-display);font-size:clamp(25px,5vw,34px);line-height:1.2;margin:12px 0 6px;text-wrap:balance}
+h2{font-family:var(--f-display);font-size:22px;line-height:1.3;margin:0 0 4px;display:flex;gap:10px;align-items:baseline}
+h2 .n{font-family:var(--f-mono);font-size:14px;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 8px}
+h3{font-size:16px;margin:14px 0 2px}
+.lead{color:var(--muted);margin:0 0 18px}
+.cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none;border-radius:10px;padding:11px 20px;margin:4px 0 8px}
+nav{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:18px 0}
+nav ol{margin:6px 0 0;padding-left:22px;columns:2 240px;column-gap:24px}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:14px;scroll-margin-top:12px}
+section p{margin:6px 0}
+ol.steps{margin:8px 0;padding-left:22px;display:grid;gap:6px}
+ul{margin:6px 0;padding-left:22px;display:grid;gap:4px}
+.box{border-radius:10px;padding:10px 14px;margin:10px 0;font-size:15px}
+.box.tip{background:var(--accent-soft)}
+.box.warn{background:var(--warn-soft);color:var(--ink)}
+.box b:first-child{color:var(--accent)}
+.box.warn b:first-child{color:var(--warn)}
+.ui{font-weight:600;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:0 6px;white-space:nowrap}
+.code{font-family:var(--f-mono);font-size:14px}
+.tag{font-size:12px;font-weight:600;border-radius:5px;padding:0 7px;white-space:nowrap}
+.tag.tmp{color:var(--warn);border:1px dashed var(--warn)}
+.tag.fit{background:var(--accent-soft);color:var(--accent)}
+.tag.avoid{background:var(--warn-soft);color:var(--warn)}
+.tag.pre{background:var(--warn-soft);color:var(--warn);font-family:var(--f-mono)}
+.tag.ok{background:var(--accent-soft);color:var(--accent);font-family:var(--f-mono)}
+dl.faq{margin:0;display:grid;gap:12px}
+dl.faq dt{font-weight:600}
+dl.faq dd{margin:2px 0 0;color:var(--ink)}
+.foot{margin-top:24px;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="cohort">Áp dụng cho sinh viên Khóa 2026</span>
+  <h1>Hướng dẫn đăng nhập và tự theo dõi lộ trình học tập</h1>
+  <p class="lead">Ngành Nông nghiệp thông minh và bền vững · Trường Đại học Việt Nhật, ĐHQGHN. Trang lộ trình giúp bạn đánh dấu học phần đã hoàn thành, xem còn thiếu bao nhiêu tín chỉ trong 165 TC và nhận gợi ý chọn môn theo định hướng.</p>
+  <a class="cta" href="./">Mở trang lộ trình học tập →</a>
+
+  <nav aria-label="Mục lục"><b>Nội dung</b>
+    <ol>
+      <li><a href="#mo">Mở trang đúng cách</a></li>
+      <li><a href="#dangnhap">Đăng nhập lần đầu</a></li>
+      <li><a href="#tongquan">Đọc thanh tiến độ</a></li>
+      <li><a href="#dinhhuong">Chọn định hướng A hoặc B</a></li>
+      <li><a href="#danhdau">Đánh dấu học phần</a></li>
+      <li><a href="#camnang">Dùng mục Cẩm nang tư vấn</a></li>
+      <li><a href="#luu">Lưu, đồng bộ và đăng xuất</a></li>
+      <li><a href="#hoidap">Câu hỏi thường gặp</a></li>
+    </ol>
+  </nav>
+
+  <section id="mo">
+    <h2><span class="n">1</span>Mở trang đúng cách</h2>
+    <ul>
+      <li>Mở đường link bằng <b>Chrome, Safari, Edge hoặc Firefox</b>, trên máy tính hay điện thoại đều được.</li>
+      <li>Nếu nhận link qua <b>Zalo, Messenger hoặc Facebook</b>, đừng mở trong ứng dụng. Hãy bấm <span class="ui">⋯</span> ở góc màn hình và chọn <span class="ui">Mở bằng trình duyệt</span>, vì Google không cho đăng nhập bên trong các ứng dụng này.</li>
+      <li>Trên điện thoại, bạn có thể thêm trang ra màn hình chính để mở nhanh: Safari chọn <span class="ui">Chia sẻ → Thêm vào MH chính</span>, Chrome chọn <span class="ui">⋮ → Thêm vào màn hình chính</span>.</li>
+    </ul>
+  </section>
+
+  <section id="dangnhap">
+    <h2><span class="n">2</span>Đăng nhập lần đầu</h2>
+    <ol class="steps">
+      <li>Bấm <span class="ui">Đăng nhập bằng Google (email trường)</span>.</li>
+      <li>Chọn email sinh viên có đuôi <b>@st.vju.ac.vn</b>. Nếu chưa thấy email này, chọn <span class="ui">Sử dụng một tài khoản khác</span> rồi nhập email và mật khẩu email trường.</li>
+      <li>Lần đầu, trang hỏi <b>Mã sinh viên</b> và <b>Họ và tên</b>. Nhập đúng để giảng viên nhận ra bạn, rồi bấm <span class="ui">Lưu và bắt đầu</span>. Bạn chỉ phải nhập một lần.</li>
+    </ol>
+    <div class="box warn"><b>Lưu ý:</b> email cá nhân (@gmail.com…) không dùng được. Nếu lỡ đăng nhập bằng email khác, trang báo <i>“Email chưa đúng”</i>. Bấm <span class="ui">Đăng xuất và chọn email trường</span> rồi đăng nhập lại.</div>
+  </section>
+
+  <section id="tongquan">
+    <h2><span class="n">3</span>Đọc thanh tiến độ</h2>
+    <ul>
+      <li>Dòng trên cùng hiện tên, mã sinh viên, email và trạng thái lưu, ví dụ <i>“Đã lưu lúc 14:05”</i>.</li>
+      <li>Số lớn là tổng tín chỉ bạn đã đạt trên <b>165 TC</b>. Ba thanh nhỏ bên dưới là ba khối: Giáo dục đại cương (41), Cơ sở và Cốt lõi ngành (109), Thực tập và Tốt nghiệp (15).</li>
+      <li>Học phần điều kiện (Giáo dục thể chất, GDQP-AN, Kỹ năng bổ trợ, 15 TC) được theo dõi riêng và <b>không tính</b> vào 165 TC, nhưng bắt buộc để xét tốt nghiệp.</li>
+    </ul>
+  </section>
+
+  <section id="dinhhuong">
+    <h2><span class="n">4</span>Chọn định hướng A hoặc B</h2>
+    <p>Chương trình có hai định hướng chuyên sâu, mỗi hướng 6 học phần (16 TC):</p>
+    <ul>
+      <li><b>A · Nông nghiệp thông minh:</b> AI, IoT, tự động hoá, sinh học phân tử, nhà kính, sau thu hoạch.</li>
+      <li><b>B · Tạo lập và quản trị doanh nghiệp nông nghiệp:</b> tiếp thị, kế toán, chuỗi giá trị, thương mại điện tử, khởi nghiệp.</li>
+    </ul>
+    <p>Bấm nút <span class="ui">A · Nông nghiệp thông minh</span> hoặc <span class="ui">B · Doanh nghiệp nông nghiệp</span> ở phần <i>Định hướng chuyên sâu</i>. Sau khi chọn, trang chỉ hiện học phần của hướng đó và gắn nhãn gợi ý cho các môn tự chọn phù hợp.</p>
+    <div class="box tip"><b>Khi nào chọn?</b> Năm 1–2 bạn có thể chọn tạm để xem gợi ý và đổi lúc nào cũng được. Cần <b>chốt định hướng vào cuối học kỳ 5</b> cùng cố vấn học tập, trước khi đăng ký học phần chuyên sâu ở HK6. Chưa biết chọn hướng nào? Xem mục <i>Cẩm nang tư vấn → Bạn phù hợp với hướng nào?</i></div>
+  </section>
+
+  <section id="danhdau">
+    <h2><span class="n">5</span>Đánh dấu học phần đã hoàn thành</h2>
+    <p>Ở phần <i>Cách xem</i> có hai cách đánh dấu. Dùng cách nào cũng được, kết quả như nhau:</p>
+    <h3>Sơ đồ cây</h3>
+    <p>Đi từ 165 TC → khối → nhóm → học phần. Bấm vào tên nhóm để mở hoặc thu gọn, rồi bấm ô vuông cạnh học phần bạn đã đạt. Mỗi thẻ học phần ghi mã, tên tiếng Việt và tiếng Anh, số TC, giờ lý thuyết/thực hành, học kỳ dự kiến và học phần tiên quyết.</p>
+    <h3>Theo 8 học kỳ</h3>
+    <p>Xếp học phần theo lộ trình chuẩn từ HK1 đến HK8. Mỗi học kỳ có dòng <i>Việc cần làm</i> nhắc mốc quan trọng. Ô viền đứt là chỗ dành cho học phần tự chọn bạn chưa chọn.</p>
+    <h3>Quy tắc trang tự kiểm tra cho bạn</h3>
+    <ul>
+      <li><b>Nhóm tự chọn đủ tín chỉ thì khoá các môn còn lại.</b> Muốn đổi môn, bỏ đánh dấu một môn đã chọn trước.</li>
+      <li><b>Học phần thế kỷ 21:</b> chọn 8 TC (4 học phần) từ <b>ít nhất 2 nhóm</b> trong A–E.</li>
+      <li><b>Tiên quyết:</b> nếu bạn đánh dấu một môn mà chưa đánh dấu môn tiên quyết của nó, trang hiện cảnh báo màu cam.</li>
+    </ul>
+    <h3>Ý nghĩa các nhãn</h3>
+    <ul>
+      <li><span class="tag tmp">mã tạm</span> học phần chưa có mã chính thức; khi đăng ký, kiểm tra mã trên hệ thống đào tạo.</li>
+      <li><span class="tag pre">VJU2010</span> tiên quyết chưa hoàn thành · <span class="tag ok">VJU2010</span> tiên quyết đã hoàn thành.</li>
+      <li><span class="tag fit">gợi ý A</span> / <span class="tag fit">gợi ý B</span> môn tự chọn phù hợp với định hướng bạn chọn.</li>
+      <li><span class="tag avoid">không nên chọn</span> môn trùng nội dung với môn bắt buộc của bạn.</li>
+    </ul>
+    <div class="box tip"><b>Mẹo:</b> chỉ đánh dấu học phần đã có điểm đạt. Môn đang học hoặc định học thì để trống, như vậy con số tiến độ mới đúng.</div>
+  </section>
+
+  <section id="camnang">
+    <h2><span class="n">6</span>Dùng mục Cẩm nang tư vấn</h2>
+    <ul>
+      <li><b>Điều kiện xét tốt nghiệp:</b> danh sách tự đánh dấu ✓ theo các học phần bạn đã đạt, cho biết còn thiếu khối nào. Chuẩn đầu ra Tiếng Anh B2, điểm trung bình và kỷ luật ghi <i>tự kiểm tra</i>, vì trang không có các số liệu này.</li>
+      <li><b>Bạn phù hợp với hướng nào?</b> Câu hỏi gợi ý để tự đánh giá và trao đổi với cố vấn học tập.</li>
+      <li><b>Chi tiết định hướng:</b> học phần bắt buộc của hướng, môn tự chọn gợi ý, đề tài đồ án, kỹ năng nên học thêm và hướng việc làm.</li>
+      <li><b>So sánh nhanh</b> hai định hướng và <b>Mốc từng năm</b>.</li>
+    </ul>
+  </section>
+
+  <section id="luu">
+    <h2><span class="n">7</span>Lưu, đồng bộ và đăng xuất</h2>
+    <ul>
+      <li>Mỗi lần đánh dấu, tiến độ <b>tự lưu</b> vào tài khoản của bạn. Không có nút Lưu. Chờ dòng trạng thái báo <i>“Đã lưu lúc …”</i> rồi mới đóng trang.</li>
+      <li>Đăng nhập cùng email trên máy khác, bạn sẽ thấy đúng tiến độ của mình.</li>
+      <li>Dùng máy chung (phòng máy, thư viện) thì bấm <span class="ui">Đăng xuất</span> trước khi rời đi.</li>
+      <li>Muốn sửa mã sinh viên hoặc họ tên, bấm <span class="ui">Sửa thông tin</span> trên dòng trạng thái.</li>
+      <li><b>Ai xem được tiến độ của bạn?</b> Chỉ bạn và giảng viên phụ trách. Các bạn cùng lớp không xem được.</li>
+    </ul>
+  </section>
+
+  <section id="hoidap">
+    <h2><span class="n">8</span>Câu hỏi thường gặp</h2>
+    <dl class="faq">
+      <dt>Google báo “Đăng nhập không an toàn” hoặc “trình duyệt không được hỗ trợ”.</dt>
+      <dd>Bạn đang mở trang trong Zalo, Messenger… Hãy mở bằng Chrome hoặc Safari (xem mục 1).</dd>
+      <dt>Bấm đăng nhập mà không thấy gì xảy ra.</dt>
+      <dd>Trình duyệt đang chặn cửa sổ bật lên. Cho phép cửa sổ bật lên cho trang này rồi bấm lại.</dd>
+      <dt>Trạng thái báo “Chưa lưu được”.</dt>
+      <dd>Kiểm tra kết nối mạng, tải lại trang và đánh dấu lại môn vừa chọn. Nếu vẫn lỗi, báo giảng viên kèm ảnh chụp màn hình.</dd>
+      <dt>Tôi không đánh dấu được một môn tự chọn.</dt>
+      <dd>Nhóm đó đã đủ tín chỉ. Bỏ đánh dấu một môn khác trong nhóm rồi chọn lại. Với khối thế kỷ 21, các môn phải thuộc ít nhất 2 nhóm.</dd>
+      <dt>Tôi đổi định hướng thì các môn đã đánh dấu có mất không?</dt>
+      <dd>Không mất. Trang chỉ tính tín chỉ của định hướng đang chọn; khi chọn lại hướng cũ, các môn đã đánh dấu vẫn còn.</dd>
+      <dt>Lộ trình chuẩn xếp một môn trước môn tiên quyết của nó?</dt>
+      <dd>Có hai trường hợp đã biết: AET2016 Thuật toán (HK2) cần Đại số tuyến tính 1 (HK3), và PEC1008 cần PHI1006 cùng ở HK1. Hỏi cố vấn học tập hoặc Phòng Đào tạo trước khi đăng ký.</dd>
+      <dt>Trang này có thay bảng điểm chính thức không?</dt>
+      <dd>Không. Đây là công cụ tự theo dõi. Kết quả chính thức theo hệ thống đào tạo của Trường và Quy chế đào tạo của ĐHQGHN.</dd>
+    </dl>
+  </section>
+
+  <p class="foot">Cần hỗ trợ thêm, hãy liên hệ cố vấn học tập hoặc giảng viên phụ trách lớp. · <a href="./">Về trang lộ trình học tập</a></p>
+</div>
+</body>
+</html>

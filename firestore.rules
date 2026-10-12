@@ -1,0 +1,42 @@
+rules_version = '2';
+// Quy tắc bảo mật cho trang Lộ trình học tập NNTM&BV K2026.
+// - Sinh viên (email @st.vju.ac.vn đã xác minh) chỉ đọc/ghi tài liệu progress/<uid> của chính mình.
+// - Giảng viên có tài liệu lecturers/<email viết thường> đọc được toàn bộ lớp, không sửa được.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function email() {
+      return request.auth.token.email.lower();
+    }
+    function isStudent() {
+      return request.auth != null
+        && request.auth.token.email_verified == true
+        && email().matches('.*@st[.]vju[.]ac[.]vn');
+    }
+    function isLecturer() {
+      return request.auth != null
+        && request.auth.token.email != null
+        && exists(/databases/$(database)/documents/lecturers/$(email()));
+    }
+    function validProgress() {
+      let d = request.resource.data;
+      return d.email == email()
+        && d.mssv is string && d.mssv.size() >= 4 && d.mssv.size() <= 15
+        && d.hoTen is string && d.hoTen.size() <= 80
+        && d.done is list && d.done.size() <= 200
+        && d.keys().hasOnly(['email', 'mssv', 'hoTen', 'track', 'done', 'tong', 'khoi', 'dieuKien', 'canhBao', 'capNhat', 'v']);
+    }
+
+    match /progress/{uid} {
+      allow read: if (isStudent() && request.auth.uid == uid) || isLecturer();
+      allow create, update: if isStudent() && request.auth.uid == uid && validProgress();
+      allow delete: if false;
+    }
+
+    match /lecturers/{lecEmail} {
+      // mỗi người chỉ kiểm tra được chính mình có trong danh sách hay không; thêm giảng viên trong Firebase Console
+      allow get: if request.auth != null && request.auth.token.email != null && email() == lecEmail;
+      allow list, write: if false;
+    }
+  }
+}
