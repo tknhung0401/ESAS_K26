@@ -35,6 +35,7 @@ a{color:var(--accent)}
   --warn:#f0bf62; --warn-soft:#352a14; --bad:#f08a7e; --bar:#26322a; color-scheme:dark;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{background:var(--bg);color:var(--ink);font:15px/1.55 var(--f-body)}
 .wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:20px 96px}
 button{font:inherit;color:inherit}
@@ -294,10 +295,10 @@ h1{font-family:var(--f-display);font-size:clamp(24px,4.4vw,34px);line-height:1.2
 // Để trống apiKey thì trang chạy ở chế độ thử, chỉ lưu trên trình duyệt.
 // =====================================================================
 const FIREBASE_CONFIG={
-  apiKey:"AIzaSyC9a1nGB7ZEr236gze--S_hQGZy7tri2kU",
-  authDomain:"esas-k26.firebaseapp.com",
-  projectId:"esas-k26",
-  appId:"1:1082207736027:web:353a7f9a28320affbe7cfe"
+  apiKey:"",
+  authDomain:"",
+  projectId:"",
+  appId:""
 };
 // ---------- dữ liệu ----------
 // c(code, tên Việt, tên Anh, TC, LT, TH, tự học, [tiên quyết], id riêng nếu mã trùng)
@@ -903,7 +904,8 @@ document.addEventListener("submit",async e=>{
 const AUTH_MSG={"auth/unauthorized-domain":"Địa chỉ trang chưa được khai báo trong Firebase (Authorized domains). Hãy báo giảng viên.",
   "auth/popup-blocked":"Trình duyệt chặn cửa sổ đăng nhập. Hãy cho phép cửa sổ bật lên rồi bấm lại.",
   "auth/network-request-failed":"Không có kết nối mạng. Kiểm tra mạng rồi thử lại.",
-  "auth/operation-not-allowed":"Firebase chưa bật đăng nhập bằng Google. Hãy báo giảng viên."};
+  "auth/operation-not-allowed":"Firebase chưa bật đăng nhập bằng Google. Hãy báo giảng viên.",
+  "auth/configuration-not-found":"Firebase chưa bật Authentication cho dự án này. Hãy báo giảng viên."};
 async function login(student){
   const p=new FA.GoogleAuthProvider();
   p.setCustomParameters(student?{hd:DOMAIN.slice(1),prompt:"select_account"}:{prompt:"select_account"});
